@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import twitch.py
+
 import logging
 from colorama import Fore
 from TwitchChannelPointsMiner import TwitchChannelPointsMiner
