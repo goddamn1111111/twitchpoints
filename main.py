@@ -71,7 +71,7 @@ twitch_miner = TwitchChannelPointsMiner(
         
         )
     )
-)
+
 
 # You can customize the settings for each streamer. If not settings were provided, the script would use the streamer_settings from TwitchChannelPointsMiner.
 # If no streamer_settings are provided in TwitchChannelPointsMiner the script will use default settings.
@@ -86,8 +86,8 @@ twitch_miner = TwitchChannelPointsMiner(
 twitch_miner.mine(
     [
         #Streamer("loge_tv", settings=StreamerSettings(make_predictions=True , follow_raid=True  , claim_drops=True ,                     bet=BetSettings(strategy=Strategy.PERCENTAGE , percentage=5 , stealth_mode=False, percentage_gap=20 , max_points=1234  , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_POINTS,     where=Condition.GTE, value=250 ) ) )),
-        Streamer("thegiftingchannel", settings=StreamerSettings(make_predictions=True  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-        Streamer("wolflemon", settings=StreamerSettings(make_predictions=True , follow_raid=True  , claim_drops=True ,                     bet=BetSettings(strategy=Strategy.PERCENTAGE , percentage=5 , stealth_mode=False, percentage_gap=20 , max_points=1234  , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_POINTS,     where=Condition.GTE, value=250 ) ) )),
+        Streamer("thegiftingchannel", settings=StreamerSettings(claim_drops=True  , watch_streak=True  ),
+        Streamer("wolflemon", settings=StreamerSettings(follow_raid=True  , claim_drops=True ),
     
        ],                                  # Array of streamers (order = priority)
     followers=False,                    # Automatic download the list of your followers
